@@ -1,0 +1,38 @@
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+# Sets yabai to be tiling
+yabai -m config layout bsp
+
+# New windows are to the right and bottom
+yabai -m config window_placement second_child
+
+# Set all padding and gaps to 20pt (default: 0)
+yabai -m config top_padding    15
+yabai -m config bottom_padding 15
+yabai -m config left_padding   15
+yabai -m config right_padding  15
+yabai -m config window_gap     15
+
+# Makes space for the ubersicht bar
+yabai -m config external_bar all:36:0
+
+# modify window shadows (default: on, options: on, off, float)
+# example: show shadows only for floating windows
+yabai -m config window_shadow float
+
+# window opacity (default: off)
+# example: render all unfocused windows with 90% opacity
+# yabai -m config window_opacity on
+# yabai -m config active_window_opacity 1.0
+# yabai -m config normal_window_opacity 0.9
+
+# ########### #
+#    Rules!   #
+# ########### #
+
+# Floating certain windows
+   yabai -m rule --add app="^Activity Monitor$" manage=off
+
+# Starting certain windows fullscreen
+
+echo "yabai configuration loaded.."
