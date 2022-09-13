@@ -1,15 +1,15 @@
 # focus window
 alt - x : yabai -m window --focus recent
-alt - i : yabai -m window --focus north
+alt - j : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 alt - k : yabai -m window --focus south
-alt - j : yabai -m window --focus west
+alt - h : yabai -m window --focus west
 alt - z : yabai -m window --focus stack.prev
 alt - c : yabai -m window --focus stack.next
 
 # swap window
 shift + alt - x : yabai -m window --swap recent
-shift + alt - i : yabai -m window --swap north
+shift + alt - j : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 shift + alt - k : yabai -m window --swap south 
-shift + alt - j : yabai -m window --swap west
+shift + alt - h : yabai -m window --swap west

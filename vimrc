@@ -849,11 +849,16 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 """""""
 "Latex"
 """""""
-let g:vimtex_view_general_viewer = 'Skim'
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'skim'
+let g:vimtex_view_skim_sync = 1
+let g:vimtex_view_skim_activate = 1
 let g:vimtex_view_general_options = '-reuse-instance @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 set textwidth=0
 set wrapmargin=1
 set formatoptions+=t
 set formatoptions-=l
-
+set autoread
+set backupdir=~/backup
+set directory=~/backup
